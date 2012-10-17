@@ -101,7 +101,6 @@ View.prototype.render = function(data){
   for (var type in events) {
     pending = events[type];
     for (var i = 0; i < pending.length; i++) {
-      console.log('%s %s', pending[i].sel, type);
       delegate.bind(this.el, pending[i].sel, type, pending[i].cb);
     }
   }

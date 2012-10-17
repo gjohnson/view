@@ -9,13 +9,13 @@
 
 ## API
 
-```html
-<\script type="text/jade" id="hello-view">
+```javascript
+<script type="text/jade" id="hello-view">
 h1 hello #{name}!!!
 button.some-action click me
 <\/script>
 
-<\script type="text/javascript">
+<script type="text/javascript">
 var view = require('view');
 
 var hello = view('#hello-view');
