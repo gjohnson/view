@@ -1,0 +1,14 @@
+{
+  "name": "view",
+  "repo": "gjohnson/view",
+  "description": "view layer",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/delegate": "*",
+  },
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}

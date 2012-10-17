@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>component-view</title>
+</head>
+<body>
+
+<script type="text/jade" id="hello-view">
+h1 hello #{name}
+button.some-action click me
+</script>
+
+<script src="jade.js"></script>
+<script src="../build/build.js"></script>
+<script>
+  var view = require('view')
+    , hello
+    , el;
+
+  hello = view('#hello-view');
+  hello.use(jade.compile);
+
+  hello.on('click .some-action', function(e){
+    console.log(e.target.innerHTML);
+  });
+
+  el = hello.render({ name: 'garrett' });
+
+  document.body.appendChild(el);
+</script>
+</body>
+</html>
